@@ -4,3 +4,10 @@ php:
 before_script:
   - composer install
 script: phpunit tests
+deploy:
+    provider: heroku
+    app: project-1-travis
+    on: master
+    skip_cleanup: true
+    api_key:
+     secure: 5hz/TXZrDgqTpsp2q/bcE/jU+E7ceh4YW1tBxyNH7vtHiNTmTT7ofaqmW51UD8xyBsE9akZ7kvZMo+qut50nAv6ldF2rIZrVR+AiYEjDUC55IHb623iFBBiGWMhgH8hOlJOXrx9rHwqKdomNre7rkG5daVN02kDtxh3JD0Z8vLct+yJqc7WGtM9sTe03+IQ2EOCchJqr87QkQTAFDlXehhJnQUt2I4MvxO8s2wFZprvo5o7wCL/oVam3N9ULKd1KEN0pVAXTUZhG4tpcNwE63uJz9fkP933ev5F23TMon5ogmRP1I3T3vBO/mP30FKRMgsnDMHQzdyOUVMFni4a8S6bcuq2XXsSjEvvBJxMSScBl5ICOCg7uL2yCMAh/gRcrLnZLPwNffxcN7BXNRgTOFs5ccZNiZNdi2ODZZxxLvse1EUdaTK8cr2mIwGaeMf5fXVLYOl+tTm9/CvCreM8Zk2nj2nmwkKuBtL0gsaMeEQ4cMJ48Quy9hITczgBMCaBIwRFptTJ7FDMuhRf8DEOu9Nhq8h88zSad2U0iSCHs8Mqzm6UF+XSXQVftjam1n4bz0zJRG5sEoMS6bg4Na/yg54R9mW+ru65tO1Epr5+YBV4lJe6aC/mc096Ol8WEeeeeDsLAkx8X+nk1WP83RQD3cQ+FRddKAXubFYdd2KjfYv8=
